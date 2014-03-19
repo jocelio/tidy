@@ -6,7 +6,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-<h:form>
+<h:form id="formUsuario">
 	<h:panelGrid columns="2">
 		<h:outputLabel value="Login"/>
 		<h:inputText value="#{usuarioBean.usuario.login}"/>
@@ -14,7 +14,7 @@
 		<h:outputLabel value="Senha"/>
 		<h:inputText value="#{usuarioBean.usuario.senha}"/>
 		
-		<h:commandButton value="Salvar" action="#{usuarioBean.salva}"/>
+		<h:commandButton value="Salvar" action="#{usuarioBean.salvar}"/>
 	</h:panelGrid>
 </h:form>
 </html>
