@@ -25,7 +25,21 @@
 		    <artifactId>primefaces</artifactId>  
 		    <version>4.0</version>  
 		</dependency> 
-
+		
+		<!-- Primefaces theme Aristo -->
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>aristo</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		
+		<!-- Primefaces theme Bootstrap -->
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+		
 		<!-- JPA/Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
