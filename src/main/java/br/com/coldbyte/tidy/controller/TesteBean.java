@@ -14,5 +14,6 @@ public class TesteBean {
 	public void setBoasVindas(String boasVindas) {
 		this.boasVindas = boasVindas;
 	}
+	
 
 }
