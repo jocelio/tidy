@@ -8,14 +8,14 @@ import javax.persistence.criteria.CriteriaQuery;
 
 import br.com.coldbyte.tidy.model.AbstractEntity;
 
-public abstract class AbstractPersistence<T extends AbstractEntity, PK extends Number> {
+public abstract class GenericPersistence<T extends AbstractEntity, PK extends Number> {
 	
 	private Class<T> entityClass;
 	
 	@PersistenceContext
 	private EntityManager em;
 	
-	public AbstractPersistence(Class<T> entityClass){
+	public GenericPersistence(Class<T> entityClass){
 		this.entityClass = entityClass;
 	}
 	

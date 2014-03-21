@@ -8,7 +8,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.com.coldbyte.tidy.service.UsuarioService;
+import br.com.coldbyte.tidy.service.bean.UsuarioServiceBean;
 import br.com.coldbyte.tidy.model.Usuario;
 
 @Named
@@ -21,7 +21,7 @@ public class UsuarioBean implements Serializable{
 	private Usuario usuario;
 	
 	@Inject
-	private UsuarioService usuarioService;
+	private UsuarioServiceBean usuarioService;
 	
 	private List<Usuario> usuarios;
 	

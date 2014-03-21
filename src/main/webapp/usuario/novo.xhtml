@@ -4,17 +4,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
-<h:form id="formUsuario">
-	<h:panelGrid columns="2">
-		<h:outputLabel value="Login"/>
-		<h:inputText value="#{usuarioBean.usuario.login}"/>
-		
-		<h:outputLabel value="Senha"/>
-		<h:inputText value="#{usuarioBean.usuario.senha}"/>
-		
-		<h:commandButton value="Salvar" action="#{usuarioBean.salvar}"/>
-	</h:panelGrid>
-</h:form>
+<ui:composition template="/layout/template.xhtml">
+
+	<ui:define name="content">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Novo Usuario</h3>
+			</div>
+			<div class="panel-body">
+				<h:form id="formUsuario" role="form">
+					<div class="form-group">
+						<h:outputLabel value="Login" for="login" />
+						<h:inputText value="#{usuarioBean.usuario.login}" id="login"
+							styleClass="form-control" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Senha" for="senha" />
+						<h:inputText value="#{usuarioBean.usuario.senha}" id="senha"
+							styleClass="form-control" />
+					</div>
+					<div class="form-group">
+						<p:commandButton value="Salvar" action="#{usuarioBean.salvar}" />
+					</div>
+				</h:form>
+			</div>
+		</div>
+
+	</ui:define>
+
+</ui:composition>
 </html>
