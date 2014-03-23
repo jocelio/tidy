@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.coldbyte</groupId>
@@ -10,36 +9,43 @@
 
 	<repositories>
 		<!-- Primefaces -->
-		<repository>  
-		    <id>prime-repo</id>  
-		    <name>PrimeFaces Maven Repository</name>  
-		    <url>http://repository.primefaces.org</url>  
-		    <layout>default</layout>  
-		</repository>  
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
 	</repositories>
 
 	<dependencies>
+	<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>3.1.0.RELEASE</version>
+		</dependency>
+
 		<!-- Primefaces -->
-		<dependency>  
-		    <groupId>org.primefaces</groupId>  
-		    <artifactId>primefaces</artifactId>  
-		    <version>4.0</version>  
-		</dependency> 
-		
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>4.0</version>
+		</dependency>
+
 		<!-- Primefaces theme Aristo -->
 		<dependency>
 			<groupId>org.primefaces.themes</groupId>
 			<artifactId>aristo</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		
+
 		<!-- Primefaces theme Bootstrap -->
 		<dependency>
 			<groupId>org.primefaces.themes</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>1.0.10</version>
 		</dependency>
-		
+
 		<!-- JPA/Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -65,40 +71,40 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.2.0.Final</version>
 		</dependency>
-		
+
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
 			<version>3.1.0.RELEASE</version>
 		</dependency>
-            
+
 
 	</dependencies>
-	
+
 	<build>
-    <plugins>
-        <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-compiler-plugin</artifactId>
-	        <version>3.1</version>
-	        <configuration>
-	            <source>1.7</source>
-	            <target>1.7</target>
-	        </configuration>
-	    </plugin>
-	    <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-war-plugin</artifactId>
-	        <version>2.4</version>
-	        <configuration>
-	          <archive>
-	            <manifest>
-	              <addClasspath>true</addClasspath>
-	            </manifest>
-	          </archive>
-	        </configuration>
-      	</plugin>
-    </plugins>
-</build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
